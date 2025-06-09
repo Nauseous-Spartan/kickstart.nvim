@@ -1,7 +1,3 @@
--- Tips
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
 -- Populate commentstring for Python
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'python',
@@ -21,22 +17,22 @@ vim.o.relativenumber = true
 -- Mouse
 vim.o.mouse = 'a'
 
--- Toggle if mode is shown in command line
+-- Hide the mode from being displayed in the command line
 vim.o.showmode = false
 
--- Enable break indent
+-- Makes the indenting consistent for long lines
 vim.o.breakindent = true
 
--- Save undo history
+-- Save undo history to an external file
 vim.o.undofile = true
 
--- Keep signcolumn on by default
+-- Enables the signcolumn to the left of the number line which shows things like git changes
 vim.o.signcolumn = 'yes'
 
--- Decrease update time (in case of crashes)
+-- Set the time before an autosave commences
 vim.o.updatetime = 250
 
--- Decrease mapped sequence wait time
+-- Set the time window to activate a mapped shortcut
 vim.o.timeoutlen = 400
 
 -- Configure how new splits should be opened
@@ -50,11 +46,16 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
--- Show which line your cursor is on
+-- Highlights which line your cursor is on
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 20
+
+-- Shiftwidth and SoftTabstop
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -70,6 +71,10 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Open and Close Terminal
+vim.keymap.set('n', '<leader>u', '<cmd>sp<CR><cmd>term<CR><cmd>resize 15<CR>a', { desc = 'Open Terminal Window' })
+vim.keymap.set('n', '<leader>y', '<C-w><C-j><cmd>q<CR>', { desc = 'Close Terminal Window' })
 
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
