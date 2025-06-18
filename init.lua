@@ -18,7 +18,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- Mouse
-vim.o.mouse = 'a'
+vim.o.mouse = 'i'
 
 -- Hide the mode from being displayed in the command line
 vim.o.showmode = false
