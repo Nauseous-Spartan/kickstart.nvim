@@ -79,6 +79,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>z', '<cmd>sp<CR><cmd>term<CR><cmd>resize 15<CR>a', { desc = 'Open Terminal Window' })
 vim.keymap.set('n', '<leader>x', '<C-w><C-j><cmd>q<CR>', { desc = 'Close Terminal Window' })
 
+-- Coding Auto Brace
+vim.keymap.set('n', '<leader>]', 'a<Space>{<CR>}<Esc>ko', { desc = 'Auto Brace' })
+
 -- Yank Whole File
 vim.keymap.set('n', '<leader>y', '<cmd>%y+<CR>', { desc = 'Yank Whole File' })
 
