@@ -18,7 +18,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- Mouse
-vim.o.mouse = 'i'
+vim.o.mouse = 'a'
 
 -- Hide the mode from being displayed in the command line
 vim.o.showmode = false
@@ -96,3 +96,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+----------------------------------------------------------------------------For JTC Internship------------------------------------------------
+-- CSV Shortcut
+vim.keymap.set(
+  'n',
+  '<leader>c',
+  [[owith open(xxx, newline='', encoding='utf-8-sig') as f:<Esc>oreader = csv.reader(f)<CR>next(reader)<Esc>/xxx<CR>ciw]],
+  { desc = 'EZ Complete CSV' }
+)
