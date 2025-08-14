@@ -82,6 +82,9 @@ vim.keymap.set('n', '<leader>x', '<C-w><C-j><cmd>q<CR>', { desc = 'Close Termina
 -- Coding Auto Brace
 vim.keymap.set('n', '<leader>]', 'a<Space>{<CR>}<Esc>ko', { desc = 'Auto Brace' })
 
+-- New Side Tab
+vim.keymap.set('n', '<leader>v', '<cmd>vsp<CR><cmd>Telescope find_files<CR>', { desc = 'New Vim Tab' })
+
 -- Yank Whole File
 vim.keymap.set('n', '<leader>y', '<cmd>%y+<CR>', { desc = 'Yank Whole File' })
 
@@ -93,6 +96,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+-- LSP
+-- vim.lsp.enable 'pyright'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
