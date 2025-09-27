@@ -75,9 +75,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Open and Close Terminal
+-- Open Terminal (Use C-d to Close the Terminal Instance)
 vim.keymap.set('n', '<leader>z', '<cmd>sp<CR><cmd>term<CR><cmd>resize 15<CR>a', { desc = 'Open Terminal Window' })
-vim.keymap.set('n', '<leader>x', '<C-w><C-j><cmd>q<CR>', { desc = 'Close Terminal Window' })
 
 -- Coding Auto Brace
 vim.keymap.set('n', '<leader>]', 'a<Space>{<CR>}<Esc>ko', { desc = 'Auto Brace' })
@@ -96,9 +95,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-
--- LSP
--- vim.lsp.enable 'pyright'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
