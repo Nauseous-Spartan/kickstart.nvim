@@ -79,13 +79,16 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>z', '<cmd>sp<CR><cmd>term<CR><cmd>resize 15<CR>a', { desc = 'Open Terminal Window' })
 
 -- Coding Auto Brace
-vim.keymap.set('n', '<leader>]', 'a<Space>{<CR>}<Esc>ko', { desc = 'Auto Brace' })
+vim.keymap.set('n', '<leader>[', 'a<Space>{<CR>}<Esc>ko', { desc = 'Auto Brace' })
 
 -- New Side Tab
 vim.keymap.set('n', '<leader>v', '<cmd>vsp<CR><cmd>Telescope find_files<CR>', { desc = 'New Vim Tab' })
 
 -- Yank Whole File
 vim.keymap.set('n', '<leader>y', '<cmd>%y+<CR>', { desc = 'Yank Whole File' })
+
+-- Open Telescope
+vim.keymap.set('n', '<leader>t', '<cmd>Telescope<CR>', { desc = 'Telescope' })
 
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
